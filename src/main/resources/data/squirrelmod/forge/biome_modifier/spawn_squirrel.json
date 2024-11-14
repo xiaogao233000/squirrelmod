@@ -1,0 +1,13 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": [
+    "minecraft:forest",
+    "minecraft:plains"
+  ],
+  "spawners": {
+    "type": "squirrelmod:squirrel",
+    "weight": 999,
+    "minCount": 2,
+    "maxCount": 5
+  }
+}

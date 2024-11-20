@@ -1,18 +1,12 @@
-package com.example.examplemod;
+package com.xiaogao.squirrelmod;
 
-import com.example.examplemod.Item.ModItem;
-import com.example.examplemod.client.ChomperRenderer;
-import com.example.examplemod.entity.custom.ChomperEntity;
-import com.example.examplemod.event.ModEntityTypes;
-import com.example.examplemod.event.ModEvents;
+import com.xiaogao.squirrelmod.Item.ModItem;
+import com.xiaogao.squirrelmod.client.SquirrelRenderer;
+import com.xiaogao.squirrelmod.event.ModEntityTypes;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.entity.EntityRenderers;
-import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.SpawnPlacements;
-import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.monster.Monster;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -25,12 +19,12 @@ import org.slf4j.Logger;
 import software.bernie.geckolib3.GeckoLib;
 
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod(ExampleMod.MOD_ID)
-public class ExampleMod
+@Mod(SquirrelMod.MOD_ID)
+public class SquirrelMod
 {
     public static final String MOD_ID = "squirrelmod";
     private static final Logger LOGGER = LogUtils.getLogger();
-    public ExampleMod()
+    public SquirrelMod()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::commonSetup);
@@ -59,9 +53,11 @@ public class ExampleMod
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-            EntityRenderers.register(ModEntityTypes.SQUIRREL.get(),ChomperRenderer::new);
+            EntityRenderers.register(ModEntityTypes.SQUIRREL.get(), SquirrelRenderer::new);
 
 
         }
+
+
     }
 }

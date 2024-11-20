@@ -1,7 +1,7 @@
-package com.example.examplemod.client;
+package com.xiaogao.squirrelmod.client;
 
-import com.example.examplemod.ExampleMod;
-import com.example.examplemod.entity.custom.ChomperEntity;
+import com.xiaogao.squirrelmod.SquirrelMod;
+import com.xiaogao.squirrelmod.entity.custom.SquirrelEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.minecraft.client.renderer.MultiBufferSource;
@@ -13,19 +13,19 @@ import software.bernie.geckolib3.renderers.geo.GeoEntityRenderer;
 import javax.annotation.Nullable;
 
 
-public class ChomperRenderer extends GeoEntityRenderer<ChomperEntity> {
-    public ChomperRenderer(EntityRendererProvider.Context renderManager) {
-        super(renderManager, new ChomperModel());
+public class SquirrelRenderer extends GeoEntityRenderer<SquirrelEntity> {
+    public SquirrelRenderer(EntityRendererProvider.Context renderManager) {
+        super(renderManager, new SqueirrelModel());
         this.shadowRadius = 0.3f;
     }
     // 调整影子的半径
     @Override
-    public ResourceLocation getTextureLocation(ChomperEntity instance) {
-        return new ResourceLocation(ExampleMod.MOD_ID, "textures/entity/chomper_texture.png");
+    public ResourceLocation getTextureLocation(SquirrelEntity instance) {
+        return new ResourceLocation(SquirrelMod.MOD_ID, "textures/entity/chomper_texture.png");
     }
 
     @Override
-    public RenderType getRenderType(ChomperEntity animatable, float partialTicks, PoseStack stack,
+    public RenderType getRenderType(SquirrelEntity animatable, float partialTicks, PoseStack stack,
                                     @Nullable MultiBufferSource renderTypeBuffer,
                                     @Nullable VertexConsumer vertexBuilder, int packedLightIn,
                                     ResourceLocation textureLocation) {

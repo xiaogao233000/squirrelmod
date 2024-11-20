@@ -62,5 +62,10 @@ mandatory=true
 versionRange="${minecraft_version_range}"
 ordering="NONE"
 side="BOTH"
-
+[[dependencies.${mod_id}]]
+modId="geckolib3" #mandatory
+mandatory=true #mandatory
+versionRange="[3.1.39,)" #mandatory
+ordering="NONE"
+side="BOTH"
 

@@ -5,7 +5,7 @@ import com.xiaogao.squirrelmod.entity.custom.SquirrelEntity;
 import net.minecraft.resources.ResourceLocation;
 import software.bernie.geckolib3.model.AnimatedGeoModel;
 
-public class SqueirrelModel extends AnimatedGeoModel<SquirrelEntity> {
+public class SqueirrelModel<T extends SquirrelEntity> extends AnimatedGeoModel<SquirrelEntity> {
     @Override
     public ResourceLocation getModelResource(SquirrelEntity object) {
         return new ResourceLocation(SquirrelMod.MOD_ID, "geo/chomper.geo.json");
